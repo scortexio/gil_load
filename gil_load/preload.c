@@ -55,9 +55,10 @@ void register_new_thread(pthread_t thread){
         threads[thread_number] = thread;
         threads_waiting[thread_number] = 0;
     }
-    else{
-        fprintf(stderr, "gil_load warning: too many threads, not all will be tracked\n");
-    }
+    //FIXME: when short-lived threads will be unregistered from the tracking table, re-enable this log
+    //else{
+    //    fprintf(stderr, "gil_load warning: too many threads, not all will be tracked\n");
+    //}
     pthread_mutex_unlock(&threads_tracked_mutex);
 }
 
