@@ -25,7 +25,7 @@ ext_modules = [
 ext_modules = cythonize(ext_modules)
     
 setup(
-    name = 'gil_load',
+    name = 'gil_load_scortex',
     version=VERSION,
     description='Utility for measuring the fraction of time the GIL is held in a program',
     author='Chris Billington',
